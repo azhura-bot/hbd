@@ -143,7 +143,7 @@ p {
 }
 
 b.merah {
-  color: rgb(255, 0, 153);
+  color: #624E88;
 }
 
 b.kuning {
@@ -161,7 +161,7 @@ b.putih {
 }
 
 span.pink {
-  border-bottom: 2px solid rgb(223, 28, 152);
+  border-bottom: 2px solid #CDC1FF;
 }
 
 span.gariskuning {
@@ -350,3 +350,8 @@ color: rgba(255, 255, 255, 0.875); /* Warna putih dengan transparansi */
 text-decoration: none; /* Menghapus garis bawah */
 }
 /* ... */
+#download-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

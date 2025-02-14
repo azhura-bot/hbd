@@ -104,3 +104,29 @@
     }
 
     const scrollInterval = setInterval(autoScroll, 50); // Menjalankan scroll otomatis setiap 50ms
+
+// Fungsi untuk menampilkan tombol setelah teks selesai ditampilkan
+function showButtonAfterText() {
+    document.getElementById("download-button").style.display = "block";
+}
+
+// Fungsi untuk animasi teks dengan TypeIt
+function katanimasi() {
+    new TypeIt("#teks3", {
+        strings: ["" + teks],
+        startDelay: 250,
+        speed: 50,
+        cursor: true,
+        afterComplete: function () {
+            clearInterval(scrollInterval);
+            teks3.innerHTML = teks;
+            setInterval(berjatuhan, 200); // Memulai animasi jatuh hati
+            showButtonAfterText(); // Memanggil fungsi untuk menampilkan tombol
+        },
+    }).go();
+}
+
+// Pastikan tombol disembunyikan saat halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("download-button").style.display = "none";
+});
