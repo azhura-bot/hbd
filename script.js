@@ -1,12 +1,11 @@
-// Fungsi untuk memulai musik
 function playMusic() {
   const music = document.getElementById('background-music');
+  music.muted = false;  // buka mute setelah interaksi
   music.play();
 }
-window.addEventListener('DOMContentLoaded', function() {
-  playMusic();
-});
+
 document.body.addEventListener('click', playMusic, { once: true });
+
 const content = document.getElementById('content');
 const footer = document.getElementsByTagName('footer')[0];
 const timer = document.getElementById('timer');
