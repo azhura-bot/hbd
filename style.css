@@ -1,357 +1,181 @@
-
-/* Definisi gaya CSS */
-
-/* CSS Anda */
-@media screen and (max-width: 768px) {
-
-  /* Menyesuaikan tata letak untuk layar kecil */
-  body {
-    font-size: 12px;
-    /* Mengurangi ukuran font untuk layar kecil */
-  }
-
-  .swiper-slide {
-    margin-top: -50px;
-    /* Menyesuaikan margin atas untuk slide */
-  }
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Itim&display=swap");
-
-:root {
-  --poppins: "Poppins", sans-serif;
-  --nunito: "Nunito Sans", sans-serif;
-  --caveat: "Caveat", cursive;
-  --quicksand: "Quicksand", sans-serif;
-  --itim: "Itim", cursive;
-  --inter: "Inter", sans-serif;
-}
-
-html,
-body {
-  position: relative;
-  height: 100%;
-  background-image: url('bg.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-body {
-  font-family: "Itim", cursive;
-  font-size: 14px;
-  color: #fff;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
-  margin: 0;
-  padding: 0;
-  background-image: url('bg.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
+body,
+html {
+  height: 100%;  
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
-  font-size: 18px;
-  /*background: #fff;*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -100px;
 }
 
-p {
-  margin-left: 60px;
-  margin-right: 60px;
-  text-align: left;
-}
+.bg {
+  /* Location of the image */
+  background-image: url(./img/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #FEC0CD;
   height: 100%;
-  object-fit: cover;
 }
 
-.swiper-pagination {
-  margin-bottom: 20vh;
-}
 
-.swiper-pagination-bullet-active {
-  background-color: #fff !important;
-  opacity: 1 !important;
-}
-
-.swiper-pagination-bullet {
-  background-color: rgba(158, 158, 158, 1) !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  opacity: 0;
-  cursor: none;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  opacity: 0;
-}
-
-.swiper-button-prev {
-  display: none;
-}
-
-.sembunyi {
-  display: none !important;
-}
-
-.stiker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90px;
-  height: 90px;
+.img {
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  padding: 10px;
-  margin-bottom: 20px;
-  transition: all 0.75s ease;
-}
-
-.stiker img {
-  width: 85px;
-  height: 85px;
-}
-
-b.merah {
-  color: #624E88;
-}
-
-b.kuning {
-  color: yellow;
-}
-
-b.putih {
-  text-shadow: none;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 1px;
-  padding-bottom: 2px;
-  background-color: white;
-  border-radius: 12px;
-}
-
-span.pink {
-  border-bottom: 2px solid #CDC1FF;
-}
-
-span.gariskuning {
-  border-bottom: 2px solid yellow;
-}
-
-p {
-  color: white;
-  font-size: 15px;
-  line-height: 1.5em;
-}
-
-.scale0 {
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.9s ease;
-}
-
-.scale1 {
-  opacity: 1;
-  transform: scale(1);
-  transition: all 0.9s ease;
-}
-
-svg {
-  vertical-align: middle;
-  width: 22px;
-  height: 22px;
-  fill: #fff;
-}
-
-.heart-icon {
-  z-index: 100;
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  animation: heartMove linear 1;
-  top: -10vh;
-}
-
-@keyframes heartMove {
-  0% {
-    transform: translateY(-10vh);
-  }
-
-  100% {
-    transform: translateY(100vh);
-  }
-}
-
-svg.line {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2;
-  animation: moving 0.7s linear infinite alternate;
-}
-
-.spin {
-  animation: spin 3s linear infinite alternate;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(20deg);
-  }
-
-  to {
-    transform: rotate(-20deg);
-  }
-}
-
-@keyframes moving {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(3px);
-  }
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  z-index: 100;
-}
-
-.loading-message {
-  font-size: 13px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
-  color: white;
-  text-align: center;
-}
-
-.blocklove {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.lovein {
-  background: #fff;
-  color: #da1e82;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.lovein:hover {
-  transform: scale(0.9);
-  color: #ff0900;
-}
-
-.lovein svg {
-  stroke: #6a00ff;
-  width: 30px;
-  height: 30px;
-}
-
-.blocktext {
   position: relative;
-  width: 100%;
-  height: 400px;
+  top: 20px;
+  margin-bottom: 30px;
+  width: 350px;
+}
+
+#tap {
+  display: inline-block;
+}
+
+.foto {
+  width: 80%;
+  max-width: 400px;
+  min-width: 300px;
   margin-top: 100px;
-  overflow: auto;
-}
-
-#Tombol {
-  position: relative;
-  margin-top: 20px;
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  transition: all 1s ease;
+  margin-bottom: 20px; */
+  display: inline-block;
+  /* vertical-align: middle;
+  line-height: normal; */
 }
 
-#Tombol a {
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
-  margin: 10px;
-  transition: all 0.2s ease;
-  padding: 10px;
-  outline: 0;
-  border: 1px solid white;
-  border-radius: 12px;
-  line-height: 15px;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
+
+
+/* Paper */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Handlee);
+
+
+.paper {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  min-width: 300px;
+  height: 540px;
+  margin: 50px auto;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
   overflow: hidden;
-  box-shadow: rgba(255, 255, 255, 0.15) 0px 7px 29px 0px;
+}
+
+.paper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  width: 45px;
+  background: radial-gradient(#616161 6px, transparent 7px) repeat-y;
+  background-size: 30px 30px;
+  border-right: 3px solid #D44147;
+  box-sizing: border-box;
+}
+
+.paper-content {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  bottom: 30px;
+  left: 50px;
+  background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
+  background-size: 30px 30px;
+}
+
+.paper-content .teks {
+  text-align: left;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  line-height: 30px;
+  padding: 0 10px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #3f3f44;
+  font-family: 'Handlee', cursive;
+  font-size: 18px;
+  box-sizing: border-box;
   z-index: 1;
 }
 
-footer {
-position: fixed;
-bottom: 0;
-width: 100%;
-text-align: center;
+.kotak {
+  position: relative;
+  width: 90%;
+  max-width: 550px;
+  min-width: 200px;
+  max-height: 350px;
+  min-height: 100px;
+  top: 300px;
+  padding: 20px 0;
+  display: inline-block;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+  overflow: hidden;
 }
 
-footer a {
-color: rgba(255, 255, 255, 0.875); /* Warna putih dengan transparansi */
-text-decoration: none; /* Menghapus garis bawah */
+.btn {
+  border-radius: 40px;
 }
-/* ... */
-#download-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+
+#slideLima {
+  position: relative;
+  top: 300px;
+}
+
+#trims {
+  position: relative;
+  top: 300px;
+  display: inline-block;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+li {
+  display: inline-block;
+  font-size: 16px;
+  list-style-type: none;
+  position: relative;
+  left: -20px;
+  margin-top: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 24px;
+}
+
+body {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container {
+  color: #333;
+  position: relative;
+  top: 250px;
+  padding: 0;
+  text-align: center;
 }
