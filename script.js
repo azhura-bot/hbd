@@ -1,11 +1,17 @@
-// Fungsi untuk memulai musik
 function playMusic() {
   const music = document.getElementById('background-music');
-  music.play();
+  music.play().catch((err) => {
+    console.error("Gagal memutar musik:", err);
+  });
 }
+
 window.addEventListener('DOMContentLoaded', function() {
-  playMusic();
+  // Tunggu interaksi pertama
+  document.addEventListener('click', function() {
+    playMusic();
+  }, { once: true }); // hanya dipanggil sekali
 });
+
 const content = document.getElementById('content');
 const footer = document.getElementsByTagName('footer')[0];
 const timer = document.getElementById('timer');
@@ -32,7 +38,7 @@ let countDown = new Date('Oct 22, 2023 00:00:00').getTime(),
     }
 
   }, second)
-  
+
 const _slideSatu = function () {
   const tap = document.getElementById('tap');
   const slideSatu = document.getElementById('slideSatu');
